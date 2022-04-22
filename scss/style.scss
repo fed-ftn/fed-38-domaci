@@ -1,4 +1,4 @@
-body {
+* {
     margin: 0;
     padding: 0;
 }
@@ -35,3 +35,41 @@ nav {
         }
     }
 }
+
+#intro {
+    background-image:url(../slike/intro.jpg);
+    background-size: cover;
+    height: 90vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        background-color: #0000009a;
+        width: fit-content;
+        padding: 10px 10vw;
+        margin-top: 30vh;
+        text-align: center;
+
+        h1 {
+            font-size: 52px;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #intro {
+        background-image: none;
+        height: fit-content;
+
+        div {
+            background-color: black;
+            margin-top: 0;
+        }
+    }
+  }
