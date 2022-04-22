@@ -54,7 +54,73 @@ nav ul li {
   font-size: 16px;
 }
 
-@media only screen and (max-width: 600px) {
+main {
+  max-width: 80vw;
+  margin: 20px auto;
+}
+main #filters {
+  text-align: right;
+}
+main #filters .filter {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin: 0px 20px;
+}
+main #filters .filter p {
+  padding: 5px 10px;
+}
+main #gallery {
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+main #gallery .picture {
+  display: inline-block;
+}
+main #gallery .picture img {
+  margin: 30px;
+}
+main #pricing {
+  text-align: center;
+}
+main #pricing h1 {
+  font-size: 44px;
+  margin: 50px auto;
+}
+main #pricing h5 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+main #pricing table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+main #pricing table th, main #pricing table td {
+  padding: 15px 5px;
+}
+main #pricing table th.dark {
+  background-color: #666262;
+  color: white;
+  border-bottom: 1px solid;
+}
+main #pricing table th.red {
+  background-color: #f54141;
+  color: white;
+}
+main #pricing table td {
+  border: 1px solid black;
+}
+main #pricing #hidden {
+  display: none;
+}
+main #pricing #hidden h5 {
+  margin: 30px 0px;
+}
+
+@media only screen and (max-width: 680px) {
   #intro {
     background-image: none;
     height: fit-content;
@@ -62,6 +128,17 @@ nav ul li {
   #intro div {
     background-color: black;
     margin-top: 0;
+  }
+
+  #filter {
+    text-align: center;
+  }
+
+  #pricing table {
+    display: none;
+  }
+  #pricing #hidden {
+    display: block !important;
   }
 }
 
