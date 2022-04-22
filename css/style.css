@@ -58,6 +58,11 @@ main {
   max-width: 80vw;
   margin: 20px auto;
 }
+main h1 {
+  font-size: 44px;
+  margin: 50px auto;
+  text-align: center;
+}
 main #filters {
   text-align: right;
 }
@@ -84,10 +89,6 @@ main #gallery .picture img {
 }
 main #pricing {
   text-align: center;
-}
-main #pricing h1 {
-  font-size: 44px;
-  margin: 50px auto;
 }
 main #pricing h5 {
   font-size: 22px;
@@ -120,6 +121,49 @@ main #pricing #hidden h5 {
   margin: 30px 0px;
 }
 
+#info {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#info #map, #info #contact {
+  display: inline-block;
+  margin: 20px 30px;
+}
+#info #contact {
+  width: 650px;
+  height: fit-content;
+  background-color: #f54141;
+}
+#info #contact .row {
+  padding: 5px 10px;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#info #contact select {
+  box-sizing: border-box;
+  padding: 10px 0px;
+  width: 120px;
+  margin-right: 40px;
+}
+#info #contact input, #info #contact textarea {
+  box-sizing: border-box;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+footer {
+  background-color: #666262;
+  padding: 20px 0px;
+  text-align: center;
+  color: white;
+}
+footer p > b {
+  color: #f54141;
+}
+
 @media only screen and (max-width: 680px) {
   #intro {
     background-image: none;
@@ -139,6 +183,10 @@ main #pricing #hidden h5 {
   }
   #pricing #hidden {
     display: block !important;
+  }
+
+  #contact {
+    width: 90% !important;
   }
 }
 

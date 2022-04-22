@@ -65,6 +65,12 @@ main {
     max-width: 80vw;
     margin: 20px auto;
 
+    h1 {
+        font-size: 44px;
+        margin: 50px auto;
+        text-align: center;
+    }
+
     #filters {
         text-align: right;
 
@@ -97,11 +103,6 @@ main {
 
     #pricing {
         text-align: center;
-
-        h1 {
-            font-size: 44px;
-            margin: 50px auto;
-        }
         
         h5 {
             font-size: 22px;
@@ -144,6 +145,55 @@ main {
     
 }
 
+#info {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    #map, #contact {
+        display: inline-block;
+        margin: 20px 30px;
+    }
+
+    #contact {
+        width: 650px;
+        height: fit-content;
+        background-color: #f54141;
+
+        .row {
+            padding: 5px 10px;
+            margin: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        select {
+            box-sizing: border-box;
+            padding: 10px 0px;
+            width: 120px;
+            margin-right: 40px;
+        }
+
+        input, textarea {
+            box-sizing: border-box;
+            padding: 10px 0px;
+            width: 100%;
+        }
+    }
+}
+
+footer {
+    background-color: #666262;
+    padding: 20px 0px;
+    text-align: center;
+    color: white;
+
+    p>b {
+        color: #f54141;
+    }
+}
+
 @media only screen and (max-width: 680px) {
     #intro {
         background-image: none;
@@ -159,10 +209,6 @@ main {
         text-align: center;
     }
 
-    #gallery {
-        
-    }
-
     #pricing {
         table {
             display: none;
@@ -171,6 +217,10 @@ main {
         #hidden {
             display: block !important;
         }
+    }
+
+    #contact {
+        width: 90% !important;
     }
   }
 
