@@ -11,10 +11,16 @@ header {
     font-size: 11pt;
     font-weight: 400;
 
+    img {
+        display: none;
+        width: 100%;
+    }
+
     nav {
         background-color: $tamnoplava;
 
         ul {
+
             li {
                 text-align: center;
 
@@ -28,12 +34,11 @@ header {
 
                 &:first-child {
                     background-color: $narandzasta;
-                    padding: 12px;
                     padding-left: 20px;
+                    padding: 12px;
                     margin-bottom: 33px;
                     font-size: 14pt;
-                    display: flex;
-                    align-items: center;
+                    @include menu_bar;
 
                     img {
                         width: 40px;
@@ -84,7 +89,7 @@ h3 {
     justify-content: space-around;
     padding: 20px;
 
-    div {
+    .button_div {
         font-size: 10pt;
         font-weight: 500;
         color: grey;
@@ -97,7 +102,7 @@ h3 {
             color: white;
         }
     }
-    
+
     p {
         padding-top: 10px;
         padding-bottom: 30px;
@@ -106,7 +111,7 @@ h3 {
 }
 
 .offer {
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,19 +128,10 @@ h3 {
             height: 250px;
             object-fit: cover;
             object-position: -10% 0;
-
         }
 
         div {
-            position: absolute;
-            width: 100%;
-            box-sizing: border-box;
-            background-color: white;
-            opacity: 0.8;
-            height: 100px;
-            padding: 20px;
-            font-weight: 500;
-            font-size: 14pt;
+            @include imgOfferText;
         }
     }
 }
@@ -158,7 +154,7 @@ section {
         background-color: $narandzasta;
         padding: 20px;
         margin: 5px;
-
+        
         ::placeholder {
             color: lightgrey;
         }
@@ -166,8 +162,10 @@ section {
         ::-ms-input-placeholder {
             color: lightgrey;
         }
-        
-        input, textarea, select {
+
+        input,
+        textarea,
+        select {
             box-sizing: border-box;
             margin-bottom: 20px;
             padding: 7px;
@@ -179,23 +177,209 @@ section {
             }
         }
     }
+}
 
+.container {
+    margin-bottom: 20px;
+}
+
+#chkPricesTbl {
+    display: none;
 }
 
 footer {
     height: 50px;
     background-color: $tamnoplava;
     position: relative;
-    
+
     div {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        color: white;
+        font-weight: 300;
 
         a {
             color: $narandzasta;
             text-decoration: none;
         }
+    }
+}
+
+@include medium_screen {
+
+    header {
+        position: relative;
+
+        img {
+            display: initial;
+        }
+
+        nav ul {
+            display: flex;
+
+            li {
+                list-style: none;
+                @include menu_bar;
+                padding: 0px;
+                margin-bottom: 0px;
+
+                &:not(:first-child) {
+                    padding-bottom: 0px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+
+                &:first-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .welcome {
+            position: absolute;
+            width: 60%;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-bottom: 0px;
+        }
+    }
+
+    section {
+        @include squeeze_15;
+    }
+
+    .btnGoesRight {
+        justify-content: right;
+        @include squeeze_15;
+
+        div {
+            margin-left: 20px;
+        }
+    }
+
+    .offer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        div {
+            width: 49%;
+
+            div {
+                display: none;
+            }
+
+            &:hover>div {
+                display: initial;
+                @include imgOfferText;
+            }
+        }
+    }
+
+    #chkPricesTbl {
+        display: initial;
+        border-collapse: collapse;
+        color: white;
+        text-align: center;
+
+        td {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        thead {
+            tr:first-child {
+                td:last-child {
+                    background-color: $narandzasta;
+                }
+            }
+
+            tr:nth-child(2) {
+                background-color: $tamnoplava;
+            }
+        }
+
+        tbody {
+            td {
+                border: 1px solid gray;
+            }
+
+            tr:nth-child(1) {
+                td:first-child {
+                    background-color: $narandzasta;
+                }
+
+                td:nth-child(2) {
+                    background-color: $tamnoplava;
+                }
+
+                td:nth-child(3),
+                td:nth-child(4) {
+                    color: grey;
+                }
+            }
+
+            tr:nth-child(2),
+            tr:nth-child(3) {
+                td:first-child {
+                    background-color: $tamnoplava;
+                }
+
+                td:nth-child(2),
+                td:nth-child(3) {
+                    color: grey;
+                }
+            }
+        }
+    }
+
+    form {
+        width: 60%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        margin-bottom: 0px;
+
+        select {
+            width: 20%;
+        }
+
+        input {
+            width: 70%;
+            height: 32px;
+        }
+    }
+
+    .chkPricesBtn {
+        display: none;
+    }
+
+}
+
+@include big_screen {
+
+    .offer {
+        justify-content: left;
+
+        div {
+            max-width: 200px;
+            margin-right: 20px;
+        }
+    }
+
+    section:nth-child(4) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        h3:first-child {flex: 1 1 100%; text-align: center;}
+        form {width: 50%;}
+        
     }
 }

@@ -3,5 +3,38 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 100;
+}
 
+@mixin menu_bar {
+    display: flex;
+    align-items: center;
+}
+
+@mixin squeeze_15 {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+@mixin imgOfferText {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    opacity: 0.8;
+    height: 100px;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 14pt;
+}
+
+@mixin medium_screen {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin big_screen {
+    @media (min-width: 900px) {
+        @content;
+    }
 }
