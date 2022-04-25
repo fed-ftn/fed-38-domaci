@@ -24,7 +24,7 @@ header {
     }
 }
 
-.imgSec {
+.bgSec {
     position: relative;
 
     img {
@@ -47,18 +47,49 @@ header {
     }
 }
 
-.tags {
+.tagsSec {
     display: flex;
     justify-content: flex-end;
-    margin-right: 15%;
+    margin-right: 10%;
     padding: 20px;
+
     button {
         background-color: white;
         border: 1px solid $font-color;
         border-radius: 50px;
         color: $font-color;
         padding: 10px;
-        width: 8%;
-        margin-right: 1%;
+        width: 100px;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+}
+
+.imgsSec {
+    background-color: $gray;
+
+    div {
+        margin-left: 15%;
+        margin-right: 15%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        img {
+            width: 25%;
+            padding: 20px;
+        }
+    }
+}
+
+footer {
+    background-color: $blue;
+    padding: 10px;
+    font-size: smaller;
+    text-align: center;
+
+    span {
+        color: $orange;
     }
 }
