@@ -125,4 +125,42 @@ header nav ul li a:hover {
   display: block;
 }
 
+.tabela {
+  width: 60%;
+  margin: 0% auto;
+  padding-bottom: 2%;
+}
+.tabela h1 {
+  color: #374249;
+  text-align: center;
+  margin-top: 3%;
+}
+.tabela p {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+table {
+  empty-cells: hide;
+  width: 80%;
+  margin: 0%;
+  border-collapse: collapse;
+  text-align: center;
+}
+table td {
+  border: 1px solid rgb(173, 172, 172);
+}
+table .empty {
+  border: none;
+}
+table .orange {
+  background-color: #f75311;
+  color: white;
+}
+table .gray {
+  background-color: #374249;
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
