@@ -1,6 +1,12 @@
+@import 'vars';
+
 * {
     margin: 0%;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: $Boja-fonta;
 }
 
 header {
@@ -10,7 +16,7 @@ header {
 
     div {
         display: flex;
-        background-color: orangered;
+        background-color: $Narandzasta;
         width: 20%;
 
         a {
@@ -20,7 +26,7 @@ header {
     }
 
     nav {
-        background-color: rgb(73, 73, 73);
+        background-color: $Tamno-plava;
         display: flex;
         width: 80%;
 
@@ -39,6 +45,10 @@ header {
                     text-decoration: none;
                     color: white;
 
+                }
+
+                a:hover {
+                    text-decoration: underline;
                 }
             }
         }
@@ -60,7 +70,7 @@ header {
 
     div {
         display: block;
-        background-color: gray;
+        background-color: $Boja-fonta;
         opacity: 0.5;
         width: 45%;
         margin: 0% auto;
@@ -83,16 +93,62 @@ header {
 .attributes {
     display: flex;
     flex-direction: row-reverse;
-    
+
 
     div {
         width: 10%;
-        border: 1px solid lightgray;
+        border: 1px solid $Svetlo-siva-1;
         border-radius: 15px;
         color: gray;
         padding: 1%;
         margin: 1%;
         text-align: center;
     }
-  
+
+    div:hover {
+        background-color: $Svetlo-siva-1;
+        color: white;
+    }
+}
+
+.images {
+    background-color: rgb(216, 242, 251);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+   .slike {
+        position: relative;
+        width: 25%;
+        height: 50%;
+
+        img {
+            width: 90%;
+            height: 300px;
+        }
+
+        .over {
+            position: absolute;
+            top: 0%;
+            height: 50%;
+            width: 100%;
+            background-color: white;
+            opacity: 0.5;
+            display: none;
+
+            p {
+                color: black;
+                padding: 5%;
+            }
+        }
+    }
+    .slike:hover {
+       .over {
+        display: block;
+       } 
+    }
+
+
 }
