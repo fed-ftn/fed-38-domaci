@@ -6,6 +6,7 @@
 header {
   display: flex;
   height: 50px;
+  width: 100%;
 }
 header div {
   display: flex;
@@ -34,6 +35,49 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: white;
+}
+
+.intro {
+  background-image: url(../slike/intro.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  height: 500px;
+  width: 100%;
+  margin: 0% auto;
+  align-items: center;
+}
+.intro img {
+  width: 100%;
+}
+.intro div {
+  display: block;
+  background-color: gray;
+  opacity: 0.5;
+  width: 45%;
+  margin: 0% auto;
+  text-align: center;
+  height: 20%;
+  padding-top: 2%;
+}
+.intro div h1 {
+  color: white;
+}
+.intro div p {
+  color: white;
+}
+
+.attributes {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.attributes div {
+  width: 10%;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  color: gray;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
