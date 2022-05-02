@@ -1,0 +1,35 @@
+@mixin srednji-ekran {
+    .attributes {
+        div {
+            width: 20%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+
+        }
+
+    }
+
+    .images {
+        .slike {
+            width: 45%;
+        }
+    }
+
+    .map {
+        display: flex;
+        flex-wrap: wrap;
+    
+
+        .mapouter {
+            width: 50%;
+            margin: 0% auto;
+        }
+
+        form {
+            width: 50%;
+            margin: 0% auto;
+        }
+
+
+    }
+}

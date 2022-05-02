@@ -92,7 +92,7 @@ header nav ul li a:hover {
 }
 
 .images {
-  background-color: rgb(216, 242, 251);
+  background-color: #f3f7f9;
   display: flex;
   flex-wrap: wrap;
   padding: 2%;
@@ -161,6 +161,80 @@ table .orange {
 table .gray {
   background-color: #374249;
   color: white;
+}
+
+.contact {
+  background-color: #f3f7f9;
+  text-align: center;
+}
+.contact h1 {
+  color: #374249;
+  margin: 2%;
+}
+.contact .map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+.contact .map form {
+  background-color: #f75311;
+  margin: 2%;
+  align-items: center;
+}
+.contact .map form .mrs {
+  width: 17%;
+  margin-bottom: 2%;
+  margin-top: 5%;
+  margin-right: 2%;
+}
+.contact .map form .ime {
+  width: 70%;
+  margin-bottom: 2%;
+}
+.contact .map form .email {
+  width: 90%;
+  margin-bottom: 2%;
+}
+.contact .map form .text {
+  width: 90%;
+}
+
+footer {
+  background-color: #374249;
+  text-align: center;
+  padding: 1%;
+}
+footer p {
+  color: white;
+}
+footer p span {
+  color: #f75311;
+}
+
+@media screen and (max-width: 800px) {
+  .attributes div {
+    width: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .images .slike {
+    width: 45%;
+  }
+
+  .map {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .map .mapouter {
+    width: 50%;
+    margin: 0% auto;
+  }
+  .map form {
+    width: 50%;
+    margin: 0% auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
