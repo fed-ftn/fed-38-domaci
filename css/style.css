@@ -1,9 +1,7 @@
 * {
   margin: 0%;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   color: #797979;
 }
 
@@ -52,9 +50,6 @@ header nav ul li a:hover {
   width: 100%;
   margin: 0% auto;
   align-items: center;
-}
-.intro img {
-  width: 100%;
 }
 .intro div {
   display: block;
@@ -139,6 +134,16 @@ header nav ul li a:hover {
   text-align: center;
   margin-top: 3%;
   margin-bottom: 3%;
+}
+.tabela button {
+  width: 70%;
+  border: 1px solid #cfd1d3;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0% auto;
+  text-align: center;
+  display: none;
+  background-color: white;
 }
 
 table {
@@ -234,6 +239,96 @@ footer p span {
   .map form {
     width: 50%;
     margin: 0% auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    height: 5%;
+    display: block;
+    margin: 0%;
+  }
+  header div {
+    width: 100%;
+  }
+  header div img {
+    width: 10%;
+    height: 10%;
+  }
+  header div a {
+    padding-top: 2%;
+  }
+  header nav {
+    width: 100%;
+  }
+  header nav ul {
+    margin: 0%;
+  }
+  header nav ul li {
+    display: block;
+    text-align: center;
+    padding: 2%;
+  }
+
+  .intro {
+    background: black;
+    height: 200px;
+  }
+  .intro div {
+    background-color: black;
+    width: 100%;
+    height: 90%;
+    padding: 0%;
+  }
+  .intro div h1 {
+    font-size: 300%;
+  }
+
+  .attributes {
+    justify-content: center;
+  }
+  .attributes div {
+    width: 25%;
+    font-size: 0.7em;
+    padding: 2%;
+  }
+
+  .images {
+    padding: 0%;
+  }
+  .images .slike {
+    width: 100%;
+  }
+  .images .slike img {
+    width: 100%;
+    height: 400px;
+  }
+  .images .slike .over {
+    display: block;
+    width: 100%;
+  }
+
+  .tabela {
+    text-align: center;
+    justify-content: space-around;
+    padding: 5%;
+  }
+  .tabela table {
+    display: none;
+  }
+  .tabela button {
+    display: inline-block;
+    margin: 0% auto;
+  }
+
+  .contact .map form {
+    width: 90%;
+  }
+  .contact .map form .mrs {
+    width: 90%;
+    margin-right: 0%;
+  }
+  .contact .map form .ime {
+    width: 90%;
   }
 }
 
